@@ -13,11 +13,11 @@
 >
 	<img src={image} alt={title} class="h-48 w-full object-cover" />
 	<div class="flex flex-grow flex-col p-4">
-		<h2 class="mb-2 font-semibold text-white">{title}</h2>
+		<h2 class="mb-2 line-clamp-2 font-semibold text-white">{title}</h2>
 		<div class="mb-4 flex items-center text-sm text-gray-400">
-			<span>by {author}</span>
+			<span class="truncate">by {author}</span>
 			{#if verified}
-				<CheckCircle class="ml-2 h-4 w-4 text-blue-400" />
+				<CheckCircle class="ml-2 h-4 w-4 flex-shrink-0 text-blue-400" />
 			{/if}
 		</div>
 		<div class="flex-grow"></div>

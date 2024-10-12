@@ -1,11 +1,20 @@
-<script>
+<script context="module" lang="ts">
+	export type Course = {
+		title: string;
+		image: string;
+		author: string;
+		verified: boolean;
+	};
+</script>
+
+<script lang="ts">
 	import CourseCard from './CourseCard.svelte';
 	import Recommendations from './Recommendations.svelte';
 
-	const courses = [
+	const courses: Course[] = [
 		{
 			title: 'Introduction to Web Development',
-			image: 'images/webdev.png',
+			image: 'images/webdev.jpeg',
 			author: 'John Doe',
 			verified: true
 		},
@@ -35,7 +44,7 @@
 		},
 		{
 			title: 'Machine Learning Fundamentals',
-			image: 'images/maths.png',
+			image: 'images/ml.webp',
 			author: 'Sarah Wilson',
 			verified: true
 		}
@@ -44,7 +53,7 @@
 
 <div class="container mx-auto px-4 py-8">
 	<h1 class="mb-4 text-3xl font-bold text-white">Our recommendations</h1>
-	<Recommendations />
+	<Recommendations {courses} />
 	<h1 class="mb-4 mt-8 text-3xl font-bold text-white">All available courses</h1>
 	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6">
 		{#each courses as course}
