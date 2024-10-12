@@ -25,9 +25,11 @@
 		</Sheet.Header>
 		<div class="mt-4 flex flex-col space-y-2">
 			{#each navigation as nav}
-				<a class="font-sterion transition-all duration-200 hover:text-primary" href={nav.link}
-					>{nav.label}</a
-				>
+				<Sheet.Close class="flex justify-start">
+					<a class="font-sterion transition-all duration-200 hover:text-primary" href={nav.link}
+						>{nav.label}</a
+					>
+				</Sheet.Close>
 			{/each}
 		</div>
 	</Sheet.Content>
