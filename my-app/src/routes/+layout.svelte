@@ -1,7 +1,31 @@
 <script>
+	import { browser } from '$app/environment';
 	import { Button } from '$lib/components/ui/button';
+	import { onMount } from 'svelte';
 	import '../app.css';
 	import Sidebar from './Sidebar.svelte';
+
+	import freighterApi from '@stellar/freighter-api';
+	import { walletStore, setAddress } from '$lib/stores/walletStore';
+
+	if (browser) {
+		onMount(async () => {
+			const isAppConnected = await freighterApi.isConnected();
+
+			if (isAppConnected.isConnected) {
+				const addressObj = await freighterApi.getAddress();
+				if (addressObj.error) {
+					console.log(addressObj.error);
+				} else {
+					setAddress(addressObj.address);
+				}
+			}
+		});
+	}
+
+	async function connectWallet() {
+		const isAppAllowed = await freighterApi.setAllowed();
+	}
 </script>
 
 <div class="flex flex-row place-content-between p-4">
@@ -12,7 +36,13 @@
 		<a href="/" class="card font-sterion text-2xl">dCourse</a>
 	</div>
 	<div class="flex w-1/3 items-center justify-end">
-		<Button>Connect wallet</Button>
+		{#if $walletStore.address}
+			<Button disabled
+				>{$walletStore.address.slice(0, 4)}...{$walletStore.address.slice(-5, -1)}</Button
+			>
+		{:else}
+			<Button on:click={connectWallet}>Connect wallet</Button>
+		{/if}
 	</div>
 </div>
 <slot></slot>
