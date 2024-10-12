@@ -51,7 +51,7 @@
 	];
 </script>
 
-<div class="container mx-auto px-4 py-8">
+<div class="container mx-auto px-16 py-8">
 	<h1 class="mb-4 text-3xl font-bold text-white">Our recommendations</h1>
 	<Recommendations {courses} />
 	<h1 class="mb-4 mt-8 text-3xl font-bold text-white">All available courses</h1>
