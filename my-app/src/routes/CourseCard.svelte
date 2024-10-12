@@ -2,6 +2,7 @@
 	import * as Sheet from '$lib/components/ui/sheet';
 	import { Button } from '$lib/components/ui/button';
 	import { CheckCircle } from 'lucide-svelte';
+	import { Progress } from '$lib/components/ui/progress';
 
 	export let title: string;
 	export let image: string;
@@ -11,6 +12,7 @@
 	export let duration: string;
 	export let level: string;
 	export let topics: string[];
+	export let progress: null | number = null;
 </script>
 
 <div
@@ -20,20 +22,40 @@
 	<div class="flex flex-grow flex-col p-4">
 		<h2 class="mb-2 line-clamp-2 font-semibold text-white">{title}</h2>
 		<div class="mb-4 flex items-center text-sm text-gray-400">
-			<span class="truncate">by {author}</span>
-			{#if verified}
-				<CheckCircle class="ml-2 h-4 w-4 flex-shrink-0 text-blue-400" />
+			{#if progress != null}
+				<Progress value={progress} />
+			{:else}
+				<span class="truncate">by {author}</span>
+				{#if verified}
+					<CheckCircle class="ml-2 h-4 w-4 flex-shrink-0 text-blue-400" />
+				{/if}
 			{/if}
 		</div>
 		<div class="flex-grow"></div>
 		<Sheet.Root>
 			<Sheet.Trigger>
-				<Button
-					variant="secondary"
-					class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
-				>
-					Learn more
-				</Button>
+				{#if progress == 0}
+					<Button
+						variant="secondary"
+						class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
+					>
+						Start my course
+					</Button>
+				{:else if progress == null}
+					<Button
+						variant="secondary"
+						class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
+					>
+						Learn more
+					</Button>
+				{:else}
+					<Button
+						variant="secondary"
+						class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
+					>
+						Continue
+					</Button>
+				{/if}
 			</Sheet.Trigger>
 			<Sheet.Content class="overflow-y-scroll sm:max-w-[700px]">
 				<Sheet.Header>

@@ -8,6 +8,7 @@
 		duration: string;
 		level: string;
 		topics: string[];
+		progress?: null | number;
 	};
 </script>
 
