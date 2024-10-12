@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as Sheet from '$lib/components/ui/sheet';
 	import { Button } from '$lib/components/ui/button';
 	import { CheckCircle } from 'lucide-svelte';
 
@@ -6,6 +7,10 @@
 	export let image: string;
 	export let author: string;
 	export let verified: boolean;
+	export let description: string;
+	export let duration: string;
+	export let level: string;
+	export let topics: string[];
 </script>
 
 <div
@@ -21,11 +26,44 @@
 			{/if}
 		</div>
 		<div class="flex-grow"></div>
-		<Button
-			variant="secondary"
-			class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
-		>
-			Learn more
-		</Button>
+		<Sheet.Root>
+			<Sheet.Trigger>
+				<Button
+					variant="secondary"
+					class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
+				>
+					Learn more
+				</Button>
+			</Sheet.Trigger>
+			<Sheet.Content class="overflow-y-scroll sm:max-w-[700px]">
+				<Sheet.Header>
+					<Sheet.Title>{title}</Sheet.Title>
+					<Sheet.Description>by {author}</Sheet.Description>
+				</Sheet.Header>
+				<div class="mt-6 space-y-4 overflow-y-scroll">
+					<img src={image} alt={title} class="w-full rounded-lg object-cover" />
+					<p class="text-sm">{description}</p>
+					<div class="grid grid-cols-2 gap-4 text-sm">
+						<div>
+							<strong>Duration:</strong>
+							{duration}
+						</div>
+						<div>
+							<strong>Level:</strong>
+							{level}
+						</div>
+					</div>
+					<div>
+						<strong>Topics covered:</strong>
+						<ul class="mt-2 list-inside list-disc">
+							{#each topics as topic}
+								<li>{topic}</li>
+							{/each}
+						</ul>
+					</div>
+					<Button class="mx-auto mt-8 flex w-1/2 justify-center">Enroll now</Button>
+				</div>
+			</Sheet.Content>
+		</Sheet.Root>
 	</div>
 </div>
