@@ -1,8 +1,53 @@
 <script>
-	import { Button } from '$lib/components/ui/button';
+	import CourseCard from './CourseCard.svelte';
+	import Recommendations from './Recommendations.svelte';
+
+	const courses = [
+		{
+			title: 'Introduction to Web Development',
+			image: 'images/webdev.png',
+			author: 'John Doe',
+			verified: true
+		},
+		{
+			title: 'Advanced JavaScript Techniques',
+			image: 'images/js.jpg',
+			author: 'Jane Smith',
+			verified: true
+		},
+		{
+			title: 'Responsive Design Mastery',
+			image: 'images/ui.jpg',
+			author: 'Alex Johnson',
+			verified: false
+		},
+		{
+			title: 'Backend Development with Node.js',
+			image: 'images/node.webp',
+			author: 'Emily Brown',
+			verified: true
+		},
+		{
+			title: 'Data Structures and Algorithms',
+			image: 'images/algos.jpg',
+			author: 'Michael Lee',
+			verified: false
+		},
+		{
+			title: 'Machine Learning Fundamentals',
+			image: 'images/maths.png',
+			author: 'Sarah Wilson',
+			verified: true
+		}
+	];
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-<Button>Hello world</Button>
+<div class="container mx-auto px-4 py-8">
+	<Recommendations />
+	<h1 class="mb-8 text-3xl font-bold text-white">Available Courses</h1>
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+		{#each courses as course}
+			<CourseCard {...course} />
+		{/each}
+	</div>
+</div>

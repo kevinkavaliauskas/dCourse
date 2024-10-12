@@ -56,3 +56,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'sterion';
+  src: url('/fonts/Sterion-BLLld.ttf') format('truetype'); /* Update the path based on your file location */
+  font-weight: normal;
+  font-style: normal;
+}
