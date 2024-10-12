@@ -12,9 +12,9 @@
 	class="flex h-full flex-col overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-all duration-300 hover:scale-[101%] hover:shadow-2xl"
 >
 	<img src={image} alt={title} class="h-48 w-full object-cover" />
-	<div class="flex flex-grow flex-col p-6">
-		<h2 class="mb-2 text-xl font-semibold text-white">{title}</h2>
-		<div class="mb-4 flex items-center text-gray-400">
+	<div class="flex flex-grow flex-col p-4">
+		<h2 class="mb-2 font-semibold text-white">{title}</h2>
+		<div class="mb-4 flex items-center text-sm text-gray-400">
 			<span>by {author}</span>
 			{#if verified}
 				<CheckCircle class="ml-2 h-4 w-4 text-blue-400" />

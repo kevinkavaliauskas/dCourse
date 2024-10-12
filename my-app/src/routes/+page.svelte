@@ -43,9 +43,10 @@
 </script>
 
 <div class="container mx-auto px-4 py-8">
+	<h1 class="mb-4 text-3xl font-bold text-white">Our recommendations</h1>
 	<Recommendations />
-	<h1 class="mb-8 text-3xl font-bold text-white">Available Courses</h1>
-	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+	<h1 class="mb-4 mt-8 text-3xl font-bold text-white">All available courses</h1>
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6">
 		{#each courses as course}
 			<CourseCard {...course} />
 		{/each}
