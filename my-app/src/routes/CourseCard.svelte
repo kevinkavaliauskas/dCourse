@@ -3,6 +3,8 @@
 	import { Button } from '$lib/components/ui/button';
 	import { CheckCircle } from 'lucide-svelte';
 	import { Progress } from '$lib/components/ui/progress';
+	import { addCourse, courseStore } from '$lib/stores/coursesStore';
+	import { page } from '$app/stores';
 
 	export let id: number;
 	export let title: string;
@@ -86,7 +88,13 @@
 							{/each}
 						</ul>
 					</div>
-					<Button class="mx-auto mt-8 flex w-1/2 justify-center">Enroll now</Button>
+					<Button
+						on:click={() => {
+							addCourse(id);
+							window.location.href = '/my-courses?new=true';
+						}}
+						class="mx-auto mt-8 flex w-1/2 justify-center">Enroll now</Button
+					>
 				</div>
 			</Sheet.Content>
 		</Sheet.Root>

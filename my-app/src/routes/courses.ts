@@ -25,7 +25,7 @@ export const courses: Course[] = [
 		topics: []
 	},
 	{
-		id: 0,
+		id: 1,
 		title: 'CS50: Intro to Computer Science',
 		image: 'images/cs50.jpg',
 		author: 'David J. Malan',
@@ -46,7 +46,7 @@ export const courses: Course[] = [
 		]
 	},
 	{
-		id: 3,
+		id: 2,
 		title: 'CS61A: Structure and Interpretation of Computer Programs',
 		image: 'images/cs61a.jpg',
 		author: 'John DeNero',
@@ -66,7 +66,7 @@ export const courses: Course[] = [
 		]
 	},
 	{
-		id: 1,
+		id: 3,
 		title: 'Introduction to Web Development',
 		image: 'images/webdev.jpeg',
 		author: 'John Doe',
@@ -78,7 +78,7 @@ export const courses: Course[] = [
 		topics: ['HTML', 'CSS', 'JavaScript', 'Responsive Design']
 	},
 	{
-		id: 2,
+		id: 4,
 		title: 'Advanced JavaScript Techniques',
 		image: 'images/js.jpg',
 		author: 'Jane Smith',
@@ -90,7 +90,7 @@ export const courses: Course[] = [
 		topics: ['ES6', 'Asynchronous Programming', 'Closures', 'Prototypes']
 	},
 	{
-		id: 3,
+		id: 5,
 		title: 'Responsive Design Mastery',
 		image: 'images/ui.jpg',
 		author: 'Alex Johnson',
@@ -102,7 +102,7 @@ export const courses: Course[] = [
 		topics: ['Flexbox', 'Grid', 'Media Queries', 'Mobile First']
 	},
 	{
-		id: 4,
+		id: 6,
 		title: 'Backend Development with Node.js',
 		image: 'images/node.webp',
 		author: 'Emily Brown',
@@ -114,7 +114,7 @@ export const courses: Course[] = [
 		topics: ['Node.js', 'Express', 'APIs', 'Databases']
 	},
 	{
-		id: 5,
+		id: 7,
 		title: 'Data Structures and Algorithms',
 		image: 'images/algos.jpg',
 		author: 'Michael Lee',
@@ -126,7 +126,7 @@ export const courses: Course[] = [
 		topics: ['Arrays', 'Linked Lists', 'Trees', 'Sorting Algorithms']
 	},
 	{
-		id: 6,
+		id: 8,
 		title: 'Machine Learning Fundamentals',
 		image: 'images/ml.webp',
 		author: 'Sarah Wilson',
@@ -138,7 +138,7 @@ export const courses: Course[] = [
 		topics: ['Supervised Learning', 'Unsupervised Learning', 'Neural Networks']
 	},
 	{
-		id: 7,
+		id: 9,
 		title: 'Creative Writing for Beginners',
 		image: 'images/creative.jpg',
 		author: 'Lisa Carter',
@@ -150,7 +150,7 @@ export const courses: Course[] = [
 		topics: ['Character Development', 'Narrative Structure', 'Dialogue', 'Descriptive Language']
 	},
 	{
-		id: 8,
+		id: 10,
 		title: 'Mindfulness and Meditation',
 		image: 'images/meditation.png',
 		author: 'Dr. James Patel',
@@ -167,7 +167,7 @@ export const courses: Course[] = [
 		]
 	},
 	{
-		id: 9,
+		id: 11,
 		title: 'Renaissance Art History',
 		image: 'images/art.jpg',
 		author: 'Dr. Sophia Reynolds',
@@ -179,7 +179,7 @@ export const courses: Course[] = [
 		topics: ['Renaissance Art', 'Baroque', 'Impressionism', 'Modern Art']
 	},
 	{
-		id: 10,
+		id: 12,
 		title: 'Nutrition and Healthy Eating',
 		image: 'images/food.jpg',
 		author: 'Rachel Green',

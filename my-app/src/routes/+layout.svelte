@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as StellarSdk from '@stellar/stellar-sdk';
 	import { browser } from '$app/environment';
 	import { Button } from '$lib/components/ui/button';
 	import { onMount } from 'svelte';
@@ -7,18 +8,45 @@
 
 	import freighterApi from '@stellar/freighter-api';
 	import { walletStore, setAddress } from '$lib/stores/walletStore';
-	import { Client, networks } from 'hello_world';
+	// import { Client, networks } from 'hello_world2';
 
-	const contract = new Client({
-		...networks.testnet, // for example; check which networks this library exports
-		rpcUrl: 'https://soroban-testnet.stellar.org:443' // use your own, or find one for testing at https://soroban.stellar.org/docs/reference/rpc#public-rpc-providers
-	});
+	// const contract = new Client({
+	// 	...networks.testnet, // for example; check which networks this library exports
+	// 	rpcUrl: 'https://soroban-testnet.stellar.org:443' // use your own, or find one for testing at https://soroban.stellar.org/docs/reference/rpc#public-rpc-providers
+	// });
 
-	let greeting: string;
-	async function greet() {
-		const { result } = await contract.hello({ to: 'devvy' });
-		greeting = result.join(' ');
-	}
+	// let greeting: string;
+	// async function greet() {
+	// 	const isAppConnected = await freighterApi.isConnected();
+	// 	if (isAppConnected.isConnected) {
+	// 		const addressObj = await freighterApi.getAddress();
+	// 		let { result } = await contract.retrieve_courses({ user_id: addressObj.address });
+	// 		console.log('result', result);
+
+	// 		console.log('Buyer:', addressObj.address, 'Type:', typeof addressObj.address);
+	// 		console.log('Course ID:', 1, 'Type:', typeof 1);
+	// 		console.log(
+	// 			'Token:',
+	// 			'CAS3J7GYLGXMF6TDJBBYYSE3HQ6BBSMLNUQ34T6TZMYMW2EVH34XOWMA',
+	// 			'Type:',
+	// 			typeof 'CAS3J7GYLGXMF6TDJBBYYSE3HQ6BBSMLNUQ34T6TZMYMW2EVH34XOWMA'
+	// 		);
+
+	// 		try {
+	// 			let { result: result2, error } = await contract.purchase({
+	// 				buyer: addressObj.address,
+	// 				course_id: 1,
+	// 				token: 'CAS3J7GYLGXMF6TDJBBYYSE3HQ6BBSMLNUQ34T6TZMYMW2EVH34XOWMA'
+	// 			});
+	// 			console.log('result2 ', result2);
+	// 		} catch (err) {
+	// 			console.log('error', err);
+	// 		}
+
+	// 		let { result: result3 } = await contract.retrieve_courses({ user_id: addressObj.address });
+	// 		console.log(result3);
+	// 	}
+	// }
 
 	if (browser) {
 		onMount(async () => {
