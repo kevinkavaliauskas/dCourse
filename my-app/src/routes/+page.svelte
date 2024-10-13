@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
 	export type Course = {
+		id: number;
 		title: string;
 		image: string;
 		author: string;
@@ -18,6 +19,7 @@
 
 	const courses: Course[] = [
 		{
+			id: 1,
 			title: 'Introduction to Web Development',
 			image: 'images/webdev.jpeg',
 			author: 'John Doe',
@@ -29,6 +31,7 @@
 			topics: ['HTML', 'CSS', 'JavaScript', 'Responsive Design']
 		},
 		{
+			id: 2,
 			title: 'Advanced JavaScript Techniques',
 			image: 'images/js.jpg',
 			author: 'Jane Smith',
@@ -40,6 +43,7 @@
 			topics: ['ES6', 'Asynchronous Programming', 'Closures', 'Prototypes']
 		},
 		{
+			id: 3,
 			title: 'Responsive Design Mastery',
 			image: 'images/ui.jpg',
 			author: 'Alex Johnson',
@@ -51,6 +55,7 @@
 			topics: ['Flexbox', 'Grid', 'Media Queries', 'Mobile First']
 		},
 		{
+			id: 4,
 			title: 'Backend Development with Node.js',
 			image: 'images/node.webp',
 			author: 'Emily Brown',
@@ -62,6 +67,7 @@
 			topics: ['Node.js', 'Express', 'APIs', 'Databases']
 		},
 		{
+			id: 5,
 			title: 'Data Structures and Algorithms',
 			image: 'images/algos.jpg',
 			author: 'Michael Lee',
@@ -73,6 +79,7 @@
 			topics: ['Arrays', 'Linked Lists', 'Trees', 'Sorting Algorithms']
 		},
 		{
+			id: 6,
 			title: 'Machine Learning Fundamentals',
 			image: 'images/ml.webp',
 			author: 'Sarah Wilson',
@@ -84,6 +91,7 @@
 			topics: ['Supervised Learning', 'Unsupervised Learning', 'Neural Networks']
 		},
 		{
+			id: 7,
 			title: 'Creative Writing for Beginners',
 			image: 'images/creative.jpg',
 			author: 'Lisa Carter',
@@ -95,6 +103,7 @@
 			topics: ['Character Development', 'Narrative Structure', 'Dialogue', 'Descriptive Language']
 		},
 		{
+			id: 8,
 			title: 'Mindfulness and Meditation',
 			image: 'images/meditation.png',
 			author: 'Dr. James Patel',
@@ -111,6 +120,7 @@
 			]
 		},
 		{
+			id: 9,
 			title: 'Renaissance Art History',
 			image: 'images/art.jpg',
 			author: 'Dr. Sophia Reynolds',
@@ -122,6 +132,7 @@
 			topics: ['Renaissance Art', 'Baroque', 'Impressionism', 'Modern Art']
 		},
 		{
+			id: 10,
 			title: 'Nutrition and Healthy Eating',
 			image: 'images/food.jpg',
 			author: 'Rachel Green',

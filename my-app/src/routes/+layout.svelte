@@ -46,10 +46,6 @@
 	</div>
 	<div class="flex w-1/3 items-center justify-center">
 		<a href="/" class="card font-sterion text-2xl">dCourse</a>
-		<Button on:click={greet}>Test me</Button>
-		{#if greeting}
-			<a href="/" class="card font-sterion text-2xl">{greeting}</a>
-		{/if}
 	</div>
 	<div class="flex w-1/3 items-center justify-end">
 		{#if $walletStore.address}
