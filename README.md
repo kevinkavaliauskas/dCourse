@@ -16,3 +16,7 @@ dCourse aims to break the barriers to education by providing equal opportunities
 ## Showcase
 
 ![alt text](https://github.com/kevinkavaliauskas/dCourse/blob/main/images/Screenshot%202024-10-13%20at%2011.00.09.png?raw=true)
+![alt text](https://github.com/kevinkavaliauskas/dCourse/blob/main/images/Screenshot%202024-10-13%20at%2011.00.24.png?raw=true)
+![alt text](https://github.com/kevinkavaliauskas/dCourse/blob/main/images/Screenshot%202024-10-13%20at%2011.00.41.png?raw=true)
+![alt text](https://github.com/kevinkavaliauskas/dCourse/blob/main/images/Screenshot%202024-10-13%20at%2011.00.50.png?raw=true)
+![alt text](https://github.com/kevinkavaliauskas/dCourse/blob/main/images/Screenshot%202024-10-13%20at%2011.01.01.png?raw=true)
