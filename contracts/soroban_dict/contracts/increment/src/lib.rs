@@ -1,5 +1,5 @@
 #![no_std]
-use soroban_sdk::{contract, contractimpl, contracttype, log, symbol_short, token, Address, Env, Map, Symbol, Val, Vec};
+use soroban_sdk::{Error, contract, contractimpl, contracttype, log, symbol_short, token, Address, Env, Map, Symbol, Val, Vec};
 
 const DATA_KEY: Symbol = symbol_short!("DATA"); // Unique key for your map
 
@@ -65,15 +65,20 @@ impl CoursesContract {
         }
     }
     
-    pub fn purchase(env: Env, buyer: Address, course_id: Val, price: i128, token:Address) {
+    pub fn purchase(env: Env, buyer: Address, course_id: Val, token:Address) {
+        log!(&env, "Here");
         // let owner: Address = env.storage().persistent().get(&Symbol::short("owner"))
-        //     .ok_or_else(|| Error::from_status(Status::InternalError))?;
-
+        // .expect("Owner not set");
         let owner: Address = env.current_contract_address();
         log!(&env, "Owner: {}", owner);
 
         let token = token::Client::new(&env, &token);
-        token.transfer(&buyer, &owner, &price);
+
+        log!(&env, "Attempting transfer from {} to {} of amount {}", buyer, owner, 100i128);
+
+
+        // buyer.require_auth();
+        // token.transfer(&buyer, &owner, &100i128);
 
         Self::append_database(env, buyer, course_id);
 

@@ -32,6 +32,5 @@ fn increment() {
 
     let token = token::Client::new(&env, &Address::from_string(&String::from_str(&env, "CBHBD77PWZ3AXPQVYVDBHDKEMVNOR26UZUZHWCB6QC7J5SETQPRUQAS4")));
 
-    client.purchase(&user_id, &course_id1, &100i128, &token.address);
-
+    client.purchase(&user_id, &course_id1, &token.address);
 }
