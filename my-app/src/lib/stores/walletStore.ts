@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { get, writable } from 'svelte/store';
 
 // Create a wallet store
 export const walletStore = writable({
@@ -8,10 +8,12 @@ export const walletStore = writable({
 });
 
 export function setAddress(address: string) {
+	console.log('setting');
 	walletStore.update((current) => ({
 		...current,
 		address: address
 	}));
+	console.log(get(walletStore).address);
 }
 
 // Function to reset the wallet
