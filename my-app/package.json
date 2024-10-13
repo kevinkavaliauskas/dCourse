@@ -23,6 +23,7 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
 		"globals": "^15.0.0",
+		"lucide-svelte": "^0.452.0",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"prettier-plugin-tailwindcss": "^0.6.5",
@@ -39,9 +40,8 @@
 		"clsx": "^2.1.1",
 		"embla-carousel-autoplay": "^8.3.0",
 		"embla-carousel-svelte": "^8.3.0",
-		"lucide-svelte": "^0.452.0",
+		"hello_world": "./packages/hello_world",
 		"tailwind-merge": "^2.5.3",
-		"tailwind-variants": "^0.2.1",
-		"hello_world": "./packages/hello_world"
+		"tailwind-variants": "^0.2.1"
 	}
 }

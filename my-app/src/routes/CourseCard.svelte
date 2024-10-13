@@ -4,6 +4,7 @@
 	import { CheckCircle } from 'lucide-svelte';
 	import { Progress } from '$lib/components/ui/progress';
 
+	export let id: number;
 	export let title: string;
 	export let image: string;
 	export let author: string;
@@ -33,30 +34,32 @@
 		</div>
 		<div class="flex-grow"></div>
 		<Sheet.Root>
-			<Sheet.Trigger>
-				{#if progress == 0}
-					<Button
-						variant="secondary"
-						class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
-					>
-						Start my course
-					</Button>
-				{:else if progress == null}
+			{#if progress == 0}
+				<Button
+					href="courses/{id}"
+					variant="secondary"
+					class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
+				>
+					Start my course
+				</Button>
+			{:else if progress == null}
+				<Sheet.Trigger>
 					<Button
 						variant="secondary"
 						class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
 					>
 						Learn more
 					</Button>
-				{:else}
-					<Button
-						variant="secondary"
-						class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
-					>
-						Continue
-					</Button>
-				{/if}
-			</Sheet.Trigger>
+				</Sheet.Trigger>
+			{:else}
+				<Button
+					href="courses/{id}"
+					variant="secondary"
+					class="mt-auto w-full bg-yellow-500 font-semibold text-gray-900 hover:bg-yellow-600"
+				>
+					Continue
+				</Button>
+			{/if}
 			<Sheet.Content class="overflow-y-scroll sm:max-w-[700px]">
 				<Sheet.Header>
 					<Sheet.Title>{title}</Sheet.Title>

@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type { Course } from '../+page.svelte';
+	import type { Course } from '../courses';
 	import CourseCard from '../CourseCard.svelte';
 
 	const courses: Course[] = [
 		{
+			id: 1,
 			title: 'Introduction to Web Development',
 			image: 'images/webdev.jpeg',
 			author: 'John Doe',
@@ -16,6 +17,7 @@
 			progress: 80
 		},
 		{
+			id: 2,
 			title: 'Advanced JavaScript Techniques',
 			image: 'images/js.jpg',
 			author: 'Jane Smith',
