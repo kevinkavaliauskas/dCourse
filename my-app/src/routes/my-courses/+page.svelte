@@ -4,17 +4,17 @@
 
 	const courses: Course[] = [
 		{
-			id: 1,
-			title: 'Introduction to Web Development',
-			image: 'images/webdev.jpeg',
-			author: 'John Doe',
-			verified: true,
+			id: 9,
+			title: 'Renaissance Art History',
+			image: 'images/art.jpg',
+			author: 'Dr. Sophia Reynolds',
+			verified: false,
 			description:
-				"Embark on an exciting journey into the world of web development and take the first steps towards building your own websites from scratch! 'Introduction to Web Development' is the perfect beginner-friendly course that will guide you through the fundamentals of creating stunning, functional websites. Whether you're someone who's always wanted to understand how websites work or an aspiring developer aiming for a career in tech, this course offers a comprehensive foundation in HTML, CSS, and JavaScript—the building blocks of the web.  In just six weeks, you'll learn how to structure your web pages with HTML, style them beautifully using CSS, and bring them to life with the power of JavaScript. You'll also get hands-on experience in designing responsive websites that look great on any device. This course provides not only the technical skills you need but also insights into best practices for web development and a community of fellow learners. Join us and create something incredible on the web!",
-			duration: '6 weeks',
-			level: 'Beginner',
-			topics: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-			progress: 80
+				"Discover the rich history of art and the movements that have shaped our world in 'Art History: From Renaissance to Modern.' This eight-week course takes you on a journey through the evolution of art, exploring iconic works from the Renaissance, Baroque, Impressionist, and Modern periods. You'll gain an understanding of the cultural, political, and social contexts that influenced artists and their creations. Instructor Dr. Sophia Reynolds, an art historian, will guide you through an exploration of the masterpieces of Da Vinci, Michelangelo, Van Gogh, Picasso, and many others. By the end of the course, you'll have a deeper appreciation for the power of art and its ability to reflect and shape human experience. This course is ideal for anyone with an interest in art, culture, or history—join us to explore the fascinating world of art!",
+			duration: '8 weeks',
+			level: 'Intermediate',
+			topics: ['Renaissance Art', 'Baroque', 'Impressionism', 'Modern Art'],
+			progress: 75
 		},
 		{
 			id: 2,
