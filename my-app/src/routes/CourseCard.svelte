@@ -21,7 +21,7 @@
 >
 	<img src={image} alt={title} class="h-48 w-full object-cover" />
 	<div class="flex flex-grow flex-col p-4">
-		<h2 class="mb-2 line-clamp-2 font-semibold text-white">{title}</h2>
+		<h2 class="mb-2 line-clamp-2 h-12 font-semibold text-white">{title}</h2>
 		<div class="mb-4 flex items-center text-sm text-gray-400">
 			{#if progress != null}
 				<Progress value={progress} />
