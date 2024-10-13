@@ -13,6 +13,47 @@ export type Course = {
 
 export const courses: Course[] = [
 	{
+		id: 0,
+		title: 'CS50: Intro to Computer Science',
+		image: 'images/cs50.jpg',
+		author: 'David J. Malan',
+		verified: true,
+		description:
+			"Embark on a transformative journey into the world of computer science and unlock the secrets behind the technology that shapes our world! 'CS50: Introduction to Computer Science' is Harvard University's acclaimed introductory course, perfect for beginners and aspiring developers alike. Led by the dynamic Professor David J. Malan, this course will guide you through the foundational concepts of programming and computational thinking. Over twelve weeks, you'll learn to think algorithmically and solve complex problems efficiently, exploring topics such as algorithms, data structures, software development, and web programming. You'll gain hands-on experience with languages like C, Python, SQL, and JavaScript, and develop practical skills in problem-solving and critical thinking. Whether you're aiming for a career in tech or simply curious about how computers work, this course provides a comprehensive foundation and a supportive community of learners. Join us and start your journey in computer science today!",
+		duration: '12 weeks',
+		level: 'Beginner',
+		topics: [
+			'C',
+			'Python',
+			'SQL',
+			'JavaScript',
+			'Algorithms',
+			'Data Structures',
+			'Web Development',
+			'Software Engineering'
+		]
+	},
+	{
+		id: 3,
+		title: 'CS61A: Structure and Interpretation of Computer Programs',
+		image: 'images/cs61a.jpg',
+		author: 'John DeNero',
+		verified: true,
+		description:
+			"Dive deep into the fundamentals of computer science and discover the principles that underpin modern programming languages! 'CS61A: Structure and Interpretation of Computer Programs' is UC Berkeley's renowned introductory course that challenges students to think critically about program design and abstraction. Led by the insightful Professor John DeNero, this course explores the beauty of programming by focusing on the big ideas of computer science. Over fifteen weeks, you'll delve into topics such as functional programming, recursion, data abstraction, and interpreters, all using the versatile Python language. You'll also get a taste of other paradigms through languages like Scheme. This course is designed for those who are eager to understand not just how to program, but why programming languages work the way they do. Whether you're a beginner with a passion for problem-solving or an intermediate programmer looking to deepen your understanding, CS61A offers a rigorous and rewarding journey into the world of computation. Join us and elevate your programming skills to new heights!",
+		duration: '15 weeks',
+		level: 'Beginner to Intermediate',
+		topics: [
+			'Python',
+			'Functional Programming',
+			'Recursion',
+			'Data Abstraction',
+			'Object-Oriented Programming',
+			'Interpreters',
+			'Scheme'
+		]
+	},
+	{
 		id: 1,
 		title: 'Introduction to Web Development',
 		image: 'images/webdev.jpeg',
