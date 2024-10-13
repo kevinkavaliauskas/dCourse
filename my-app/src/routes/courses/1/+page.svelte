@@ -227,8 +227,8 @@
 				<RadioGroup.Root bind:value={answers[k]}>
 					{#each set.options as answer, i}
 						<div class="flex items-center space-x-2">
-							<RadioGroup.Item value={String(i)} id="r{i + 1}" />
-							<Label for="r{i + 1}">{answer}</Label>
+							<RadioGroup.Item value={String(i)} id="r{k + 1}" />
+							<Label for="r{k * i + 1}">{answer}</Label>
 						</div>
 					{/each}
 					<RadioGroup.Input name="spacing" />
