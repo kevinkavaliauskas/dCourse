@@ -45,7 +45,7 @@
 	let walletAddress: string; // Declare a variable to hold the wallet address
 
 	walletStore.subscribe((value) => {
-		walletAddress = value.address; // Update the variable with the current address
+		if (value.address) walletAddress = value.address; // Update the variable with the current address
 	});
 
 	$: console.log($walletStore.address);
