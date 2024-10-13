@@ -14,6 +14,18 @@ export type Course = {
 export const courses: Course[] = [
 	{
 		id: 0,
+		title: 'G100: Mathematics BSc',
+		image: 'images/wm.jpg',
+		author: 'University of Warwick',
+		verified: true,
+		description:
+			"Embark on a transformative journey into the world of computer science and unlock the secrets behind the technology that shapes our world! 'CS50: Introduction to Computer Science' is Harvard University's acclaimed introductory course, perfect for beginners and aspiring developers alike. Led by the dynamic Professor David J. Malan, this course will guide you through the foundational concepts of programming and computational thinking. Over twelve weeks, you'll learn to think algorithmically and solve complex problems efficiently, exploring topics such as algorithms, data structures, software development, and web programming. You'll gain hands-on experience with languages like C, Python, SQL, and JavaScript, and develop practical skills in problem-solving and critical thinking. Whether you're aiming for a career in tech or simply curious about how computers work, this course provides a comprehensive foundation and a supportive community of learners. Join us and start your journey in computer science today!",
+		duration: '3 years',
+		level: 'Intermediate',
+		topics: []
+	},
+	{
+		id: 0,
 		title: 'CS50: Intro to Computer Science',
 		image: 'images/cs50.jpg',
 		author: 'David J. Malan',
