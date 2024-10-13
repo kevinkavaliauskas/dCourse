@@ -41,6 +41,7 @@
 		"embla-carousel-svelte": "^8.3.0",
 		"lucide-svelte": "^0.452.0",
 		"tailwind-merge": "^2.5.3",
-		"tailwind-variants": "^0.2.1"
+		"tailwind-variants": "^0.2.1",
+		"hello_world": "./packages/hello_world"
 	}
 }

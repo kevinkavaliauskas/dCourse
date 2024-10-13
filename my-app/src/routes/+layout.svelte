@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import { Button } from '$lib/components/ui/button';
 	import { onMount } from 'svelte';
@@ -7,6 +7,18 @@
 
 	import freighterApi from '@stellar/freighter-api';
 	import { walletStore, setAddress } from '$lib/stores/walletStore';
+	import { Client, networks } from 'hello_world';
+
+	const contract = new Client({
+		...networks.testnet, // for example; check which networks this library exports
+		rpcUrl: 'https://soroban-testnet.stellar.org:443' // use your own, or find one for testing at https://soroban.stellar.org/docs/reference/rpc#public-rpc-providers
+	});
+
+	let greeting: string;
+	async function greet() {
+		const { result } = await contract.hello({ to: 'devvy' });
+		greeting = result.join(' ');
+	}
 
 	if (browser) {
 		onMount(async () => {
@@ -34,6 +46,10 @@
 	</div>
 	<div class="flex w-1/3 items-center justify-center">
 		<a href="/" class="card font-sterion text-2xl">dCourse</a>
+		<Button on:click={greet}>Test me</Button>
+		{#if greeting}
+			<a href="/" class="card font-sterion text-2xl">{greeting}</a>
+		{/if}
 	</div>
 	<div class="flex w-1/3 items-center justify-end">
 		{#if $walletStore.address}
