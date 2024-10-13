@@ -9,14 +9,14 @@ pub struct CoursesContract;
 // Define the state of the contract
 #[contracttype]
 pub struct MyState {
-    pub data: Map<Address, Vec<Val>>, // Map with Symbol keys and i32 values
+    pub data: Map<Address, Vec<i32>>, // Map with Symbol keys and i32 values
 }
 
 impl MyState {
     // Constructor for MyState
     pub fn new(env: &Env) -> Self {
         // Check if the map already exists in storage
-        if let Some(existing_map) = env.storage().persistent().get::<_, Map<Address, Vec<Val>>>(&DATA_KEY) {
+        if let Some(existing_map) = env.storage().persistent().get::<_, Map<Address, Vec<i32>>>(&DATA_KEY) {
             // If it exists, return the existing state
             Self {
                 data: existing_map,
@@ -36,7 +36,7 @@ impl MyState {
 #[contractimpl]
 impl CoursesContract {
     /// Adding Value to Database
-    pub fn append_database(env: Env, user_id: Address, course_id: Val) {
+    pub fn append_database(env: Env, user_id: Address, course_id: i32) {
         let mut state = MyState::new(&env);
 
         if let Some(mut courses) = state.data.get(user_id.clone()) {
@@ -52,7 +52,7 @@ impl CoursesContract {
     }
 
     /// Retrieve course_ids for a given user_id
-    pub fn retrieve_courses(env: Env, user_id: Address) -> Vec<Val> {
+    pub fn retrieve_courses(env: Env, user_id: Address) -> Vec<i32> {
         let state = MyState::new(&env);
 
         // Check if the user_id exists in the map
@@ -65,7 +65,7 @@ impl CoursesContract {
         }
     }
     
-    pub fn purchase(env: Env, buyer: Address, course_id: Val, token:Address) {
+    pub fn purchase(env: Env, buyer: Address, course_id: i32, token:Address) {
         log!(&env, "Here");
         // let owner: Address = env.storage().persistent().get(&Symbol::short("owner"))
         // .expect("Owner not set");
