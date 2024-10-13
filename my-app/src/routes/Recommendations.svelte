@@ -2,7 +2,7 @@
 	import Autoplay from 'embla-carousel-autoplay';
 	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import type { Course } from './+page.svelte';
+	import type { Course } from './courses';
 	import CourseCard from './CourseCard.svelte';
 
 	export let courses: Course[];
