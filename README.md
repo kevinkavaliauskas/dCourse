@@ -14,3 +14,5 @@ dCourse offers courses to underprivileged learners, providing education in a cur
 dCourse aims to break the barriers to education by providing equal opportunities to learners from all walks of life. With a focus on blockchain for secure credentialing, it opens doors for students to prove their qualifications globally.
 
 ## Showcase
+
+![alt text](https://github.com/kevinkavaliauskas/dCourse/blob/main/images/Screenshot%202024-10-13%20at%2011.00.09.png?raw=true)
